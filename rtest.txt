@@ -1,0 +1,44 @@
+	add x5 x6 x7	
+	xor x9 x6 x7	
+	sub x18 x6 x7	
+	sll x19 x6 x27	
+
+
+0x0149d933	srl x18 x19 x20	srl s2,s3,s4
+0x0029d913	srli x18 x19 2	srli s2,s3,2
+0x418bdb33	sra x22 x23 x24	sra s6,s7,s8
+0x402bdb13	srai x22 x23 2	srai s6,s7,2
+0x01aceab3	or x21 x25 x26	or s5,s9,s10
+0x002cea93	ori x21 x25 2	ori s5,s9,2
+0x01acfab3	and x21 x25 x26	and s5,s9,s10
+0x004cfa93	andi x21 x25 4	andi s5,s9,4
+
+
+
+addi s2,s3,5
+slti s2,s3,5
+sltiu s2,s3,1
+xori s2,s3,0
+slli s2,s3,4
+
+
+srl s2,s3,s4
+srli s2,s3,2
+sra s6,s7,s8
+srai s6,s7,2
+or s5,s9,s10
+ori s5,s9,-2048
+and s5,s9,s10
+andi s5,s9,4
+addi s2,s3,-2046
+slti s2,s3,5
+sltiu s2,s3,1
+xori s2,s3,0
+slli s2,s3,4
+
+
+lw s2, 5(x0)
+lh s2, 5(x0)
+lhu s2, 5(x0)
+lb s2, 5(x0)
+lbu s2, 5(x0)

@@ -1,0 +1,32 @@
+// copying 4 32 bit words
+
+li s2,1
+li s3,4                           
+li s4,0
+li s5,4
+l2:lbu s6,0(s4)
+sb s6,0(s5)
+sub s3,s3,s2
+beq s3,x0,la
+addi s4,s4,1
+addi s5,s5,1
+jal l2
+la:nop
+
+
+// exchange 4 32 bit words
+
+li s2,1
+li s3,4                           
+li s4,0
+li s5,16
+l2:lw s6,0(s4)
+lw s7,0(s5)
+sw s6,0(s5)
+sw s7,0(s4)
+sub s3,s3,s2
+beq s3,x0,la
+addi s4,s4,4
+addi s5,s5,4
+jal l2
+la:nop
